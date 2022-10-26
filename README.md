@@ -22,7 +22,7 @@ This is a sample visual essay to demonstrate how to use Juncture to build visual
 
 Here is the same image using the fit="contain" instructions. Simple but very useful. 
 <param ve-image fit="contain"
-       manifest="https://collections.lib.uwm.edu/iiif/info/celestial/238/manifest.json">
+       manifest="https://collections.lib.uwm.edu/iiif/info/agdm/25606/manifest.json">
 
 ## Image without zoom
 
