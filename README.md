@@ -16,7 +16,7 @@
 
 This is a sample visual essay to demonstrate how to use Juncture to build visual essays. The banner image features one of NASA's images from the Hubble Telescope, showing a small region of space in the constellation Fornax [^1]. To the right, the first image in the essay is a much earlier rendition of a more nearby celestial phenomenon, the movement of the planets. This is from the UWM Libraries American Geographical Society Library digital collection featuring the Atlas Novus Coelestis, from 1742. 
 <param ve-image fit="contain"
-       manifest="https://collections.lib.uwm.edu/iiif/info/celestial/84/manifest.json">  
+       manifest="https://collections.lib.uwm.edu/iiif/info/agdm/25606/manifest.json">  
   
 ## IIIF image "to fit"
 
