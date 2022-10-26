@@ -14,39 +14,60 @@
 <param ve-entity eid="Q221092"> <!-- Mauritshuis -->
 <param ve-entity eid="Q36600"> <!-- The Hague -->
 
-# Sample visual essay
+This is a sample visual essay to demonstrate how to use Juncture to build visual essays. The banner image features one of NASA's images from the Hubble Telescope, showing a small region of space in the constellation Fornax [^1]. To the right, the first image in the essay is a much earlier rendition of a more nearby celestial phenomenon, the movement of the planets. This is from the UWM Libraries American Geographical Society Library digital collection featuring the Atlas Novus Coelestis, from 1742. 
+<param ve-image fit="contain"
+       manifest="https://collections.lib.uwm.edu/iiif/info/celestial/84/manifest.json">  
+  
+## IIIF image "to fit"
 
-This is a sample visual essay demonstrating a few key features of a Visual Essay. Additional [Documentation](https://github.com/JSTOR-Labs/juncture/wiki) and [examples](https://jstor-labs.github.io/juncture-examples) are available for reference.
-<param ve-image 
-       manifest="https://collections.lib.uwm.edu/iiif/info/agdm/25606/manifest.json">
+Here is the same image using the fit="contain" instructions. Simple but very useful. 
+<param ve-image fit="contain"
+       manifest="https://collections.lib.uwm.edu/iiif/info/celestial/238/manifest.json">
 
-# Basic usage
+## Image without zoom
 
-## Image
+Globi Coelestis in Tabulis Tlanas Redacti Pars I: Full size with no zoom or fit="contain" code. 
+<param ve-image  
+       manifest="https://collections.lib.uwm.edu/iiif/info/celestial/84/manifest.json">
+    
+## Image with zoom
 
-_Girl with a Pearl Earring_ (Dutch: Meisje met de parel) is an oil painting by Dutch Golden Age painter Johannes Vermeer, 
-dated c. 1665. Going by various names over the centuries, it became known by its present title towards the end of the 
-20th century after the earring worn by the girl portrayed there.[^1]
-<param ve-image 
-       label="Girl with a Pearl Earring" 
-       description="painting by Johannes Vermeer" 
-       license="public domain" 
-       url="https://upload.wikimedia.org/wikipedia/commons/0/0f/1665_Girl_with_a_Pearl_Earring.jpg">
+Globi Coelestis in Tabulis Tlanas Redacti Pars I0: Zoomed in using image coordinates to focus on a particular part of the image (in this case, an image of the "camelopardalus" constellation).
+<param ve-image region="2324,2293,1305,1083"
+       manifest="https://collections.lib.uwm.edu/iiif/info/celestial/84/manifest.json">
+      
+## Image with zoom-to
+
+In this image, you can also see part of the constellation <span data-click-image-zoomto="2952,644,1812,1504">Cygnus</span>. You can also zoom in closer to view details of the image for constellation <span data-click-image-zoomto="3089,1412,1258,1045">Cephus</span>. 
+<param ve-image  
+       manifest="https://collections.lib.uwm.edu/iiif/info/celestial/84/manifest.json">    
+     
+## Map image
+
+You can use Juncture to great effect with images of maps. This is a nautical chart of South Orkney, dated 1847. It's very sparse, but you can zoom in to better view <span data-click-image-zoomto="8121,1033,2023,1646">Georgie du Sud and the Cape of Disappointement</span>. You can also veer south to better view <span data-click-image-zoomto="4916,5733,2023,1646">Coronation Island</span>. 
+<param ve-image  
+       manifest="https://collections.lib.uwm.edu/iiif/info/agdm/21500/manifest.json">
 
 ## Map
 
-The work has been in the collection of the Mauritshuis in The Hague since 1902 and has been the subject of various 
-literary treatments. In 2006, the Dutch public selected it as the most beautiful painting in the Netherlands.
-<param ve-map center="Q36600" zoom="11" prefer-geojson>
+The South Orkney Islands are a group of islands in the South Atlantic Ocean. We are using the map information from Wikidata to create the map to right.
+<param ve-map center="Q207383" zoom="11">
 
-## Multiple viewers
+Lat/long based map - using decimal-based lat/long for Buenos Aires in Argentina - north of the South Orkney Islands but nearby, relatively speaking.
+<param ve-map center="-34.368, -57.596" zoom="9">
 
-Multiple viewers may be defined for a single paragraph of text.  The first viewer defined is displayed as the default viewer.  
-Others are selectable using icons displayed in the top right margin of the paragraph.
+## Video
+
+You can also include Youtube videos by using the param ve-video code and the youtube video ID. This is an official NASA video with highlights from the first images to be sent back from the James Webb Space Telescope, from July 2022.
+<param ve-video id="1C_zuHf6lP4" title="Highlights: First Images from the James Webb Space Telescope (Official NASA Video)">
+
+## Finding IIIF resources
+
+This image is a page from a fourteenth century copy of Al-Sufi's "Book of the Constellations of the Fixed Stars," held by the National Library of France, and featured in the Library of Congress's [World Digital Library](https://www.loc.gov/collections/world-digital-library/about-this-collection/) collection. [*Al-Sufi's "Book of the Constellations of the Fixed Stars," followed by Maxims, and al-Qazwini's "The Wonders of Creation".*](https://lccn.loc.gov/2021667391)
 <param ve-image 
-       manifest="[https://iiif.juncture-digital.org/manifest/6dd738aed85597cac540ad31dd5818e86ef7f2918c7b43a9eb3123d5538e6e4c](https://collections.lib.uwm.edu/iiif/info/agdm/25606/manifest.json)">
-<param ve-map center="Q36600" zoom="11">
-
+       manifest="https://www.loc.gov/item/2021667391/manifest.json">       
+  
+  
 # References
 
-[^1]: [Wikipedia: Girl with a Pearl Earring](https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring)
+[^1]: Image: NASA and the European Space Agency., Public domain, via Wikimedia Commons" [href="https://commons.wikimedia.org/wiki/File:Hubble_ultra_deep_field.jpg](https://commons.wikimedia.org/wiki/File:Hubble_ultra_deep_field.jpg)
